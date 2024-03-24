@@ -1,0 +1,268 @@
+/* favorite font */
+@font-face {
+    font-family: Daydreams;
+    src: url(Daydream.ttf);
+  }
+  
+  /* Reset default styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Daydreams, sans-serif;
+    line-height: 1.6;
+    background-color: #222;
+    color: #fff;
+  }
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Header */
+  header {
+    background-color: #111;
+    padding: 20px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+  
+  
+nav ul li a {
+    font-family: Daydreams, sans-serif;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+    nav ul li a:hover {
+    color: #ffcc00;
+    }
+    
+    /* Banner */
+    .banner {
+    background-color: #111;
+    padding: 100px 0;
+    text-align: center;
+    }
+    
+    
+.banner h1 {
+    font-family: Daydreams, sans-serif;
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+  
+  .banner p {
+    font-family: Daydreams, sans-serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    font-family: Daydreams, sans-serif;
+    display: inline-block;
+    background-color: #ffcc00;
+    color: #111;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+    
+    .btn:hover {
+    background-color: #ffd633;
+    }
+    
+    .social-media {
+    margin-top: 20px;
+    }
+    
+    .social-media a {
+    display: inline-block;
+    margin-right: 10px;
+    }
+    
+    .social-media img {
+    width: 30px;
+    height: 30px;
+    }
+    
+    /* Introduction Section */
+    #intro {
+    padding: 60px 0;
+    }
+    
+    .intro-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+    
+    .intro-text {
+    font-family: Daydream;
+    flex: 1;
+    margin-right: 40px;
+    }
+    
+    
+.intro-text h2 {
+    font-family: Daydreams, sans-serif;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .intro-text p {
+    font-family: Daydreams, sans-serif;
+    margin-bottom: 20px;
+  }
+    
+    .intro-image {
+    flex: 1;
+    text-align: center;
+    }
+    
+    .intro-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    }
+
+    /* Pixel Art Animation Sections */
+    .pixel-art-animation {
+    height: 400px;
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+    }
+    
+    footer {
+        font-family: Daydreams, sans-serif;
+        background-color: #111;
+        padding: 20px;
+        text-align: center;
+      }
+    
+    /* Pixel Art Elements */
+    .pixel-art {
+    background-image: url('pixel-art-background.png');
+    background-repeat: repeat;
+    background-size: 20px;
+    }
+    
+    .pixel-art-border {
+    border: 4px solid;
+    border-image: url('pixel-art-border.png') 4 round;
+    }
+    
+    /* Media Queries */
+    @media screen and (max-width: 768px) {
+    .container {
+    padding: 0 10px;
+    }
+    
+    .banner h1 {
+    font-size: 36px;
+    }
+    
+    .banner p {
+    font-size: 18px;
+    }
+    
+    .intro-content {
+    flex-direction: column;
+    }
+    
+    .intro-text {
+    margin-right: 0;
+    margin-bottom: 40px;
+    }
+    
+    .pixel-art-animation {
+    height: 300px;
+    }
+
+    /* Typing Animation */
+    .typing-animation {
+    position: relative;
+    display: inline-block;
+     }
+  
+     .typing-animation::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -10px;
+    width: 10px;
+    height: 100%;
+    background-color: #fff;
+    animation: blink 0.7s infinite;
+    }
+  
+    @keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    }
+    /* Burger Menu */
+  .burger-menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+    cursor: pointer;
+    }
+  
+    .burger-icon {
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    margin-bottom: 6px;
+    transition: transform 0.3s;
+    }
+  
+   .burger-menu.active .burger-icon {
+    transform: rotate(45deg) translate(5px, 5px);
+   }
+  
+    .menu-links {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #111;
+    padding: 10px;
+    list-style: none;
+     }
+  
+    .menu-links li {
+        margin-bottom: 10px;
+    }
+  
+    .menu-links li a {
+        font-family: Daydreams, sans-serif;
+        color: #fff;
+        text-decoration: none;
+      }
+  
+    .burger-menu.active .menu-links {
+        display: block;
+    }
+    
+}
