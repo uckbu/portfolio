@@ -8,8 +8,8 @@
   }
   #cursor-circle {
     position: fixed;
-    width: 60px;
-    height: 60px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     border: 2px solid white;
     background-color: rgba(255, 255, 255, 0.062);
@@ -84,6 +84,35 @@ a:hover {
   header {
     background-color: #111;
     padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .top-banner {
+    list-style: none;
+    display: flex;
+    margin-right: 40px;
+  }
+  
+  .top-banner li {
+    margin-right: 200px;
+  }
+  
+  .top-banner li a {
+    font-family: Daydreams, sans-serif;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .top-banner li a:hover {
+    color: #ffcc00;
   }
   
   nav ul {
@@ -278,50 +307,41 @@ nav ul li a {
       opacity: 0;
     }
     }
-    /* Burger Menu */
-  .burger-menu {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 999;
-    cursor: pointer;
-    }
-  
-    .burger-icon {
-    width: 30px;
-    height: 4px;
-    background-color: #fff;
-    margin-bottom: 6px;
-    transition: transform 0.3s;
-    }
-  
-   .burger-menu.active .burger-icon {
-    transform: rotate(45deg) translate(5px, 5px);
-   }
-  
-    .menu-links {
-    display: none;
-    position: absolute;
-    top: 40px;
-    right: 0;
-    background-color: #111;
-    padding: 10px;
-    list-style: none;
-     }
-  
-    .menu-links li {
-        margin-bottom: 10px;
-    }
-  
-    .menu-links li a {
-        font-family: Daydreams, sans-serif;
-        color: #fff;
-        text-decoration: none;
-      }
-  
-    .burger-menu.active .menu-links {
-        display: block;
-    }
+
+/* Burger Menu */
+.burger-menu {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+  cursor: pointer;
+}
+
+
+.menu-links {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: #111;
+  padding: 10px;
+  list-style: none;
+}
+
+.menu-links li {
+  margin-bottom: 10px;
+}
+
+.menu-links li a {
+  font-family: Daydreams, sans-serif;
+  color: #fff;
+  text-decoration: none;
+}
+
+.burger-menu.active .menu-links {
+  display: block;
+}
+
 /* Projects Section */
 .projects-section {
     padding: 60px 0;
